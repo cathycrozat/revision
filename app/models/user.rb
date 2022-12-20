@@ -4,7 +4,6 @@ class User < ApplicationRecord
   has_many :reservations
   has_one_attached :photo
 
-  validates :name, presence: true
 
 
 
