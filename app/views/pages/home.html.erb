@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.pixabay.com/photo/2014/07/31/21/41/apartment-406901_960_720.jpg);">
+  <div class="container ">
+    <div class="slogan">
+      <p> <i class=" fa-solid fa-heart"> </i> Flats to rent</p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <% if user_signed_in? %>
+        <%= link_to "Our flats", flats_path, class:"btn btn-flat " %>
+        <% else %>
+        <%= link_to "Log in", flats_path, class:"btn btn-flat" %>
+      <% end %>
+    </div>
+  </div>
+</div>
